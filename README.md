@@ -1,4 +1,6 @@
-# Largest-of-three-numbers
+### EX NO:01 
+### DATE: 
+# <p align="center"> Largest of three numbers</p> 
 ## Aim:
 To write a C# program to find the largest of three numbers
 
@@ -48,7 +50,8 @@ namespace Pradeep
 ```
 ## Output:
 
-![1](https://user-images.githubusercontent.com/75235477/165473194-052ad844-3765-4c3a-aabd-719a7fc13217.png)
+
+![1](https://user-images.githubusercontent.com/102652887/174746601-6928a50a-fa9d-4e28-9310-f276646e491f.png)
 
 ## Result:
 Thus the C# program to find the largest of three numbers is executed successfully
