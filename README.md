@@ -1,47 +1,116 @@
-# Largest-of-three-numbers
-## Aim:
-To write a C# program to find the largest of three numbers
-
-## Algorithm:
-### Step1: 
-Start
-### Step2:
-Create a class and declare three variable with integer datatype
-### Step3:
-Use if condition to check whether num1 is largest than num2 and num3
-### Step4:
-Use elif condition to check whether num2 is largest than num1 and num3
-### Step5:
-Use else condition to display that third variable is largest among all the variables
-### Step6:
-stop
-
+# Plagirsm Checker
+# PRADEEP PS
+# 2122020230034
 ## Program:
-~~~
-using System;
-namespace Pradeep
-{
-    class program
-    {
-            static void Main(string[] args)
-            {
-                int num1, num2, num3;
-                Console.WriteLine("Enter Three integer");
-                num1 = Convert.ToInt32(Console.ReadLine());
-                num2 = Convert.ToInt32(Console.ReadLine());
-                num3 = Convert.ToInt32(Console.ReadLine());
-            if ((num1 > num2) && (num1 > num3))
-                Console.WriteLine(num1 + " is Greater");
-            else if ((num2 > num1) && (num2 > num3))
-                Console.WriteLine(num2 + " is Greater");
-            else
-                Console.WriteLine(num3 + " is Greater");
-        }
-    }
-}
-~~~
+~~~c
 
-## Output:
-![Screenshot (53)](https://user-images.githubusercontent.com/102652887/163914411-9fa61f32-73a3-47be-b245-0913b87ea2d4.png)
-## Result:
-Thus the C# program to find the largest of three numbers is executed successfully
+
+
+#include <stdio.h>
+#include<string.h>
+void check(char str1[],char str2[]);
+int count=0;
+int word=0;
+int n=0;
+int main()
+{
+    int sum=0;
+   char str1[100000]={"The Brihadishvara Temple Also known as the Rajarajeshvara, after the king who built it, the Brihadishvara (or Brhadisvara) temple was constructed between c. 995 and 1025 CE using Chola war booty and tribute from Sri Lanka. The temple was dedicated to the Hindu god Shiva. Reaching a height of 63 metres, it is the tallest temple building in India. The entire rectangular complex measures approximately 140 x 75 metres and is surrounded by a wall with regular interior niches. Inside the compound are various secondary shrines and a monumental double gateway entrance (gopuras)."};
+   char str2[100000]={"The gopuras at Thanjavur are two huge monumental gateways which lead to the compound dominated by the Brihadishvara temple. They are the earliest mature examples of the form in southern India. Built on the eastern side of the complex, the outer gopura has five stories and the inner one three. Each gopura has a centrally positioned entrance giving access to a single two-storied chamber on each side of it. The gopuras at Thanjavur are unique because each façade (interior and exterior) is not identical as in later examples. The outer facades each have two large dvarapalas (door guardians) as well as figure sculpture in their many niches and large decorative fan shapes. The top of each gopura is crowned with a massive shala or barrel-vaulted roof. Eventually at other sites gopuras would become even larger and more spectacular than the temples themselves."};
+   int n1=strlen(str1);
+   int n2=strlen(str2);
+  
+   
+   int k=0;
+  char str3[10000];
+ 
+ 
+ 
+   for(int i=0;str1[i]!='\0';i++)
+   {
+       if(str1[i]!=' ')
+       {
+       str3[k]=str1[i];
+         
+         k++;
+       }
+      if(str1[i]==' '||i==n1-1)
+       {
+           
+           
+           if(strcmp(str3,"The")==0||strcmp(str3,"the")==0||strcmp(str3,"to")==0||strcmp(str3,"it")==0||strcmp(str3,"by")==0||strcmp(str3,"and")==0||strcmp(str3,"And")==0)
+           {
+               
+               
+           }
+          else
+          {
+              word++;
+           check(str3,str2);
+          }
+           for(int n=0;n<k;n++)
+           {
+               str3[n]=0;
+           }
+           k=0;
+       }
+       n++;
+       
+    }
+    int s1=word/3;
+    
+    
+    if(count>=s1)
+    {
+        printf("plagiarism");
+    }
+    else
+    {
+        printf("This is not plagiarism");
+    }
+    
+    
+    return 0;
+}
+void check(char str1[],char news[])
+{ 
+  
+    int k=0;
+    char str3[100];
+    int n1=strlen(news);
+    int n2=strlen(str1);
+    
+    
+    for(int i=0;news[i]!='\0';i++)
+   {
+       
+       if(news[i]!=' ')
+       {
+       str3[k]=news[i];
+         
+         k++;
+       }
+      if(news[i]==' '||i==n1-1)
+       {
+          
+         
+           if(strcmp(str3,str1)==0)
+           {
+               count++;
+               
+           }
+           
+           for(int n=0;n<k;n++)
+           {
+               str3[n]=0;
+           }
+           k=0;
+       }
+    }
+
+}
+
+
+
+
+~~~
